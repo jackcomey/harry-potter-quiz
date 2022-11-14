@@ -4,7 +4,8 @@ const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 
-let shuffledQuestions, currentQuestionIndex
+
+let shuffledQuestions, currentQuestionIndex, score;
 
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
@@ -16,6 +17,7 @@ function startGame() {
   startButton.classList.add('hide')
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
+  score = 0;
   questionContainerElement.classList.remove('hide')
   setNextQuestion()
 }
@@ -57,9 +59,13 @@ function selectAnswer(e) {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
   } else {
-    startButton.innerText = 'Restart'
-    startButton.classList.remove('hide')
+    gameOver();
   }
+}
+
+function gameOver() {
+  startButton.innerText = 'Restart';
+  startButton.classList.remove('hide');
 }
 
 function setStatusClass(element, correct) {
