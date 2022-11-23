@@ -1,8 +1,10 @@
+// Declare constants for DOM Elemenets
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
+const playerScore = document.getElementById('final-score')
 
 
 let shuffledQuestions, currentQuestionIndex, score;
@@ -52,7 +54,7 @@ function resetState() {
 function selectAnswer(e) {
   const selectedButton = e.target
   const correct = selectedButton.dataset.correct
-  setStatusClass(document.body, correct)
+  setStatusClass(document.body, correct,)
   Array.from(answerButtonsElement.children).forEach(button => {
     setStatusClass(button, button.dataset.correct)
   })

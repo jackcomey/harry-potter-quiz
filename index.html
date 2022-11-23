@@ -15,6 +15,7 @@
 </head>
 
 <body>
+  <!-- Container where everything will be inside -->
   <div class="container">
     <div id="question-container" class="hide">
       <div id="question">Question</div>
@@ -25,10 +26,16 @@
         <button class="btn">Answer 4</button>
       </div>
     </div>
+    <!-- Start and next buttons -->
     <div class="controls">
       <button id="start-btn" class="start-btn btn">Start</button>
       <button id="next-btn" class="next-btn btn hide">Next</button>
     </div>
+    <!-- Final score area of the game -->
+    <div id="end-area" class="end-area">
+      <h1 class="final-score">Final Score</h1>
+      <h1 id="final-score" class="final-score">0</h1>
+  </div>
   </div>
   <script src="assets/js/script.js"></script>
 </body>

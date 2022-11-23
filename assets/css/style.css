@@ -21,14 +21,17 @@ body {
     background-color: hsl(var(--hue), 100%, 20%);
 }
 
+/* Linking together color of the body if the answer is correct */
 body.correct {
     --hue: var(--hue-correct);
 }
 
+/* Linking together color of the body if the answer is wrong */
 body.wrong {
     --hue: var(--hue-wrong);
 }
 
+/* Container section where everything will be in */
 .container {
     width: 800px;
     max-width: 80%;
@@ -38,6 +41,7 @@ body.wrong {
     box-shadow: 0 0 10px 2px;
 }
 
+/* Buttons */
 .btn-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
