@@ -10,15 +10,24 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 
+<!-- Including Stylesheet of app -->
   <link rel="stylesheet" href="assets/css/style.css">
   <title>Harry Potter Quiz</title>
 </head>
 
 <body>
+
+
   <!-- Container where everything will be inside -->
   <div class="container">
+<div class="main-heading">
+    <h1>Welcome Harry Potter Lovers</h1></div>
+    <div id="score-live-question">
+      <p style="display: table-cell;">Score: <span id="scoreId"></span></p>
+      <p style="display: table-cell;">Questions: <span id="liveQuestionId"></span></p>
+    </div>
     <div id="question-container" class="hide">
-      <div id="question">Question</div>
+      <div id="questionDiv"><h1 id="question">Question</h1></div>
       <div id="answer-buttons" class="btn-grid">
         <button class="btn">Answer 1</button>
         <button class="btn">Answer 2</button>
@@ -27,11 +36,13 @@
       </div>
     </div>
     <!-- Start and next buttons -->
+    <div id="finalScoreDiv"><h1 id="finalScore"></h1></div>
     <div class="controls">
       <button id="start-btn" class="start-btn btn">Start</button>
       <button id="next-btn" class="next-btn btn hide">Next</button>
     </div>
   </div>
+  <!-- Including JS script of the app -->
   <script src="assets/js/script.js"></script>
 </body>
 
