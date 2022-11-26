@@ -1,5 +1,7 @@
-*, *::before, *::after {
-    box-sizing: border box;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -10,7 +12,8 @@
 }
 
 body {
-    --hue: var(--hue-nuetral);
+    /*--hue: var(--hue-nuetral);*/
+    background-image: url('../images/forest.jpg');
     padding: 0;
     margin: 0;
     display: flex;
@@ -21,23 +24,14 @@ body {
     background-color: hsl(var(--hue), 100%, 20%);
 }
 
-/* Linking together color of the body if the answer is correct */
-body.correct {
-    --hue: var(--hue-correct);
-}
-
-/* Linking together color of the body if the answer is wrong */
-body.wrong {
-    --hue: var(--hue-wrong);
-}
 
 /* Container section where everything will be in */
 .container {
     width: 800px;
     max-width: 80%;
-    background-color: white;
+    background-color:  #f5f5f5;
     border-radius: 5px;
-    padding: 10px;
+    padding: 25px;
     box-shadow: 0 0 10px 2px;
 }
 
@@ -51,11 +45,12 @@ body.wrong {
 
 .btn {
     --hue: var(--hue-nuetral);
-    border: 1px solid hsl(var(--hue), 100%, 30%);;
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    ;
     background-color: hsl(var(--hue), 100%, 50%);
     border-radius: 5px;
     padding: 5px 10px;
-    color: white;
+    color: black;
     outline: none;
 }
 
@@ -71,7 +66,8 @@ body.wrong {
     --hue: var(--hue-wrong);
 }
 
-.start-btn, .next-btn {
+.start-btn,
+.next-btn {
     font-size: 1.5rem;
     font-weight: bold;
     padding: 10px 20px;
@@ -85,4 +81,35 @@ body.wrong {
 
 .hide {
     display: none;
+}
+
+#questionDiv {
+    border: 1px solid black;
+    border-radius: 5px;
+    min-height: 70px;
+    text-align: center;
+    width: 100%;
+}
+
+
+#score-live-question {
+    display: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#finalScoreDiv {
+    border: 1px solid black;
+    border-radius: 5px;
+    min-height: 30px;
+    text-align: center;
+    width: 100%;
+    display: none;
+    margin-bottom: 10px;
+}
+
+.main-heading {
+    height: 100px;
+    text-align: center;
 }
