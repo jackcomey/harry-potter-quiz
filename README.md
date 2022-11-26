@@ -120,7 +120,7 @@ The live link can be found here - (https://jackcomey.github.io/harry-potter-quiz
 ## Credits
 
 **Content**
-- The content of the questions was form a Harry Potter quiz on the [Beano](https://www.beano.com/).  
+- The content of the questions was form a Harry Potter quiz found on the [Beano](https://www.beano.com/).  
 - I drew a lot of inspiration from YouTube to be able to bring together the various parts of the JavaScript & how everything flowed together.  [Coding Nepal](https://www.youtube.com/watch?v=pQr4O1OITJo) and [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k) were quite important videos for me with this project. 
 
 **Media**
