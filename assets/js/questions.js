@@ -1,4 +1,4 @@
-//Questions List which used to display in the Quiz app
+//Questions which used to display in the quiz
 export const questions = [
   {
     question: 'Which is the first book in the series?',

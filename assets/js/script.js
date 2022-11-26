@@ -1,4 +1,4 @@
-import { questions } from "./questions.js" 
+import { questions } from "./questions.js";
 // Declare constants for DOM Elemenets
 const startButton = document.getElementById('start-btn');
 const nextButton = document.getElementById('next-btn');
@@ -12,14 +12,14 @@ const liveQuestionId = document.getElementById('liveQuestionId');
 
 let shuffledQuestions, currentQuestionIndex, score, currentQuestionLive, scoreAdded;
 
-//Initializing Button Clicks
+//Initializing button clicks
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++;
   setNextQuestion();
 });
 
-//Function to Start the Quiz
+//Function to start the quiz
 function startGame() {
   scoreQuestionDiv.style.display = 'table';
   document.getElementById('finalScoreDiv').style.display = "none";
@@ -34,7 +34,7 @@ function startGame() {
   setNextQuestion();
 }
 
-//Function to view Next question
+//Function to view next question
 function setNextQuestion() {
   resetState();
   showQuestion(shuffledQuestions[currentQuestionIndex]);
@@ -48,7 +48,7 @@ function setNextQuestion() {
 }
 
 
-//Function to show Question
+//Function to show question
 function showQuestion(question) {
   questionElement.innerText = question.question;
   question.answers.forEach(answer => {
@@ -63,7 +63,7 @@ function showQuestion(question) {
   });
 }
 
-//Function to reset the state of Quiz 
+//Function to reset the state of quiz 
 function resetState() {
   clearStatusClass(document.body);
   nextButton.classList.add('hide');
@@ -72,7 +72,7 @@ function resetState() {
   }
 }
 
-//Checking the answer on the base of clicked button
+//Checking the answer on the basis of the clicked button
 function selectAnswer(e) {
   const selectedButton = e.target;
     if(selectedButton.dataset.correct == 'true' && scoreAdded === 0){
@@ -94,7 +94,7 @@ function selectAnswer(e) {
   }
 }
 
-//When quiz reached at the end of questions
+//When the quiz is finished after all questions have been answered
 function gameOver() {
   document.getElementById('finalScoreDiv').style.display = "block";
   document.getElementById('finalScore').innerText = "Your final score is "+score+" out of 10.";
@@ -102,7 +102,7 @@ function gameOver() {
   startButton.classList.remove('hide');
 }
 
-//Set the colors on the base of selected answers
+//Set the colors on the basis of selected answers
 function setStatusClass(element, correct) {
   clearStatusClass(element);
   if (correct) {
@@ -117,3 +117,4 @@ function clearStatusClass(element) {
   element.classList.remove('correct');
   element.classList.remove('wrong');
 }
+
